@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="">Human</label>
+      <input type="text" id="human" readonly /> <br />
+
+      <label for="">Computer</label>
+      <input type="text" id="computer" readonly /> <br />
+
+      <button type="submit">Play!</button> <br /><br />
+
+      <label for="">Result</label>
+      <input type="text" id="result" readonly /> <br />
+    </form>
+  </body>
+
+  <script>
+    const form = document.querySelector("form");
+    const human = form.querySelector("#human");
+    const computer = form.querySelector("#computer");
+    const result = form.querySelector("#result");
+
+    const random = () => {
+      const random = Math.floor(Math.random() * 3);
+      let choice = "";
+      if (random === 0) {
+        return (choice = "rock");
+      } else if (random === 1) {
+        return (choice = "paper");
+      } else {
+        return (choice = "scissors");
+      }
+    };
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      computer.value = random();
+      human.value = random();
+      if (computer.value === human.value) {
+        result.value = "Draw";
+      } else if (
+        (computer.value === "rock" && human.value === "scissors") ||
+        (computer.value === "scissors" && human.value === "paper") ||
+        (computer.value === "paper" && human.value === "rock")
+      ) {
+        result.value = "Computer wins";
+      } else {
+        result.value = "Human wins";
+      }
+    });
+  </script>
+</html>

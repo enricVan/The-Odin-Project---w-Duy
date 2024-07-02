@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>When the user inputs a number</li>
+      <li>Initialize a counter variable and set its value to zero</li>
+      <li>
+        While counter is smaller than user inputted number increment the counter
+        by one
+      </li>
+      <li>Print the value of the counter variable</li>
+    </ul>
+
+    <form id="form">
+      <label for="">Nhập số: </label>
+      <input type="number" />
+      <button type="submit">Submit</button> <br />
+      <label for="">Counter: </label>
+      <input type="text" readonly />
+    </form>
+
+    <script src="./js/script.js"></script>
+    <script>
+      let count = 0;
+      //Sử dụng DOM: Document Object Model
+      const form = document.getElementById("form");
+      const input = form.querySelector("input[type='number']");
+      const counter = form.querySelector("input[type='text']");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (count < input.value) {
+          count++;
+        }
+        counter.value = count;
+      });
+    </script>
+  </body>
+</html>
