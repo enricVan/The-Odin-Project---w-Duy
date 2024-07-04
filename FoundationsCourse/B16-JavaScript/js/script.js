@@ -32,7 +32,7 @@
 //   console.log("Hello World!");
 // }
 
-// //arrow function
+//arrow function
 // const sayHello2 = () => {
 //   console.log("Hello World2!");
 // };
