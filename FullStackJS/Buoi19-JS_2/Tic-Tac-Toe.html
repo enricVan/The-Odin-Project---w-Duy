@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+
+  <style>
+    #wrapper {
+      display: flex;
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <div id="wrapper">
+      <div class="row">
+        <div class="cell" id="A1"></div>
+        <div class="cell" id="A2"></div>
+        <div class="cell" id="A3"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="B1"></div>
+        <div class="cell" id="B2"></div>
+        <div class="cell" id="B3"></div>
+      </div>
+      <div class="row">
+        <div class="cell" id="C1"></div>
+        <div class="cell" id="C2"></div>
+        <div class="cell" id="C3"></div>
+      </div>
+    </div>
+
+    <h3 style="display: flex; justify-content: center" id="result"></h3>
+    <div style="display: flex; justify-content: center">
+      <button id="reset">Reset</button>
+    </div>
+    <script src="./Tic-Tac-Toe.js"></script>
+  </body>
+</html>
